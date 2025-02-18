@@ -1,0 +1,26 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: book-recommendation
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-3-small
+book:
+  aiapp:
+    vectorStorePath: C:/Users/jyomall/Desktop/Projects/tmp/bookvectorstore.json
+    documentsToLoadForBooks:
+      - classpath:/goodreads_books_children.json
+      - classpath:/goodreads_books_comics_graphic.json
+      - classpath:/goodreads_books_fantasy_paranormal.json
+      - classpath:/goodreads_books_history_biography.json
+      - classpath:/goodreads_books_mystery_thriller_crime.json
+      - classpath:/goodreads_books_poetry.json
+      - classpath:/goodreads_books_romance.json
+      - classpath:/goodreads_books_young_adult.json
+      - classpath:/goodreads_books.json
+#    documentsToLoadForAuthors:
+#      - classpath:/goodreads_book_authors.json
